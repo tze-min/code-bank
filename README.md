@@ -1,3 +1,9 @@
+# About
+
+Repository of solutions written for programming problems, as well as notes and code snippets implementing data structures (see `data-structures`) and algorithms. Will be updated whenever I work through additional material and questions.
+
+Languages: Python, SQL
+
 # Quick references
 
 | Problem | Algorithm |
