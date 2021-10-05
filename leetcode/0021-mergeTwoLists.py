@@ -5,11 +5,33 @@
 #         self.next = next
 
 class Solution:
-    def mergeTwoLists(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+    def mergeTwoLists(self, n1: Optional[ListNode], n2: Optional[ListNode]) -> Optional[ListNode]:
         
-        if l1 and l2:
-            # make sure each element of l1 is always smaller than the corresponding one of l2
-            if l1.val > l2.val:
-                l1, l2 = l2, l1
-            l1.next = self.mergeTwoLists(l1.next, l2)
-        return l1 or l2
+        # method 1: iterative --------------------
+
+        ll = curr = ListNode(0)
+
+        # while there are still nodes in BOTH lists to compare against each other
+        while n1 and n2:
+            if n1.val < n2.val:
+                curr.next = n1
+                n1 = n1.next
+            else:
+                curr.next = n2
+                n2 = n2.next
+            curr = curr.next
+
+        # if there aren't anymore nodes in at least one list, add remaining nodes to the result
+        curr.next = n1 or n2
+        return ll.next
+
+
+        # method 2: recursive --------------------
+
+        if n1 and n2:
+            
+            # make sure each element of n1 is always smaller than the corresponding one of n2
+            if n1.val > n2.val:
+                n1, n2 = n2, n1
+            n1.next = self.mergeTwoLists(n1.next, n2)
+        return n1 or n2
