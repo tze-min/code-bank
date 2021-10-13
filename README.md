@@ -1,6 +1,8 @@
 # About
 
-Repository of solutions written for programming problems, as well as notes and code snippets implementing data structures (see `data-structures`) and algorithms. Will be updated whenever I work through additional material and questions.
+Repository of solutions written for programming problems, as well as notes and code snippets implementing `data-structures` and algorithms. Will be updated whenever I work through additional material and questions. 
+
+Also contains miscellaneous snippets for situations I normally come across and want to reference again, like `web-scraping`.
 
 Languages: Python, SQL
 
